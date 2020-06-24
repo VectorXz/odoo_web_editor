@@ -21,7 +21,6 @@ var Wysiwyg = Widget.extend({
             ['table', ['table']],
             ['insert', ['link', 'picture']],
             ['history', ['undo', 'redo']],
-			['view', ['fullscreen', 'codeview', 'help']],
         ],
         'styleWithSpan': false,
         'inlinemedia': ['p'],
@@ -73,8 +72,6 @@ var Wysiwyg = Widget.extend({
         this.$el = this.$target.parent();
         var options = this._editorOptions();
         this.$target.summernote(options);
-		console.log(options);
-		console.log(this.$target);
         this.$editor = this.$('.note-editable:first');
         this.$editor.data('wysiwyg', this);
         this.$editor.data('oe-model', options.recordInfo.res_model);
